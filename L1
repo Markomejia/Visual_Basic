@@ -1,0 +1,20 @@
+Sub MACRO1()
+
+'SE LLENA ESE RANGO CON EL NUMERO 1
+Range("A2:C4").Value = 1
+
+'SE LLENA ESE RANGO CON EL TEXTO DE EJMEPLO
+Range("A2:C4").Value = "EJEMPLO"
+
+'EJEMPLOS DE RANGO
+Range("D5:D5").Value = 10
+
+Range("C6", "E6").Value = "EJEMPLO"
+
+End Sub
+
+'NUEVA MACRO
+Sub MK()
+
+
+End Sub
