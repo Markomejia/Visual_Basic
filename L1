@@ -16,5 +16,106 @@ End Sub
 'NUEVA MACRO
 Sub MK()
 
+'DECLARAR UNA VARIABLE DE TIPO STRING
+Dim RAMO As String
+
+'DECLARAR OTROS TIPOS DE VARIABLES
+Dim FRECUENCIA As Integer
+Dim SEVERIDAD As Double
+
+FRECUENCIA = 6500
+RAMO = "INCENDIO"
+SEVERIDAD = 1.465648
+
+'CONCATENAR IMPRESION CON LA VARIABLE RAMO
+Range("B2").Value = "INFORME PARA EL RAMO DE:" & RAMO
+
+'OTRA CONCATENACION EVITAR SIGNOS Y SIMBOLOS OTOGRAFICOS
+Range("B3").Value = "EL NUMERO DE SINIESTROS PARA ESTE AÑO FUE DE: " & FRECUENCIA
+
+Range("B4").Value = "LA SEVERIDAD DE LOS SINIESTROS FUE DE: " & SEVERIDAD
+
+End Sub
+
+Sub MK2()
+
+Dim RAMO As String
+Dim FRECUENCIA As Integer
+Dim SEVERIDAD As Double
+Dim S1 As Double
+FRECUENCIA = 6500
+RAMO = "INCENDIO"
+SEVERIDAD = 1.465648
+Range("B7").Value = "INFORME PARA EL RAMO DE:"
+Range("B8").Value = "EL NUMERO DE SINIESTROS PARA ESTE AÑO FUE DE: "
+Range("B9").Value = "LA SEVERIDAD DE LOS SINIESTROS FUE DE: "
+
+'CREAR UN RANGO PAR ESCRIBIR LOS VALORES QUE SE MUESTRAN
+Range("C7").Value = RAMO
+Range("C8").Value = FRECUENCIA
+Range("C9").Value = SEVERIDAD
+
+'OPERACION CON UNA VARIABLE PERO ES RECOMENDABLE DECLARAR S1 ANTES
+S1 = SEVERIDAD * 3.56978
+Range("B10").Value = "SEVERIDAD AJUSTADA"
+Range("C10").Value = S1
+
+Range("B11").Value = "NUMERO DE POLIZAS ESTIMADAS PARA EL PROXIMO AÑO ES DE: "
+
+'LLAMAR LA FUNCION DE NUMERO ALEATORIO
+Range("C11").Value = Application.WorksheetFunction.RandBetween(3500, 6000)
+
+End Sub
+
+Sub EJERCICIO()
+
+'LLEVAR UN VALOR FUTURO DE 5 AÑOS
+
+Range("B15").Value = "VALOR FUTURO:  "
+
+Range("C15").Value = Application.WorksheetFunction.FV(0.42, 5, 0, 6500, [1])
+
+'OTRA FORMA
+
+Dim VP As Double
+Dim TASA As Double
+Dim TIEMPO As Double
+Dim VF As Double
+
+VP = 6500
+TASA = 0.42
+TIEMPO = 5
+
+VF = (VP) * ((1 + TASA) ^ TIEMPO)
+
+Range("B18").Value = "VALOR FUTURO"
+
+
+Range("C18").Value = VF
+
+End Sub
+
+Sub CALCULADORA()
+
+
+Dim SUMA As Double
+Dim RESTA As Double
+Dim MULTIPLICACION As Double
+Dim DIVISION As Double
+
+'SUMA
+Range("A1").Value = "SUMA"
+
+
+Range("A2").Value = Application.WorksheetFunction.RandBetween(1, 60000)
+Range("A3").Value = Application.WorksheetFunction.RandBetween(1, 60000)
+Range("A4").Value = Application.WorksheetFunction.RandBetween(1, 60000)
+
+Range("B1").Value = Application.WorksheetFunction.Sum(A2, A3, A4)
+
+Range("C1").Value = "RESTA"
+Range("E1").Value = "MULTIPLICACION"
+Range("G1").Value = "DIVISION"
+
 
 End Sub
