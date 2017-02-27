@@ -1,0 +1,43 @@
+Sub ejercicio1()
+ 
+a = "b7"
+Range(a).Cells(1, 1).Value = "Informe del ramo de incendio"
+Range(a).Cells(2, 1).Value = "Año"
+Range(a).Cells(2, 2).Value = 1
+Range(a).Cells(2, 3).Value = 2
+Range(a).Cells(2, 4).Value = 3
+Range(a).Cells(2, 5).Value = 4
+Range(a).Cells(3, 1).Value = "Siniestro"
+Range(a).Cells(3, 2).Value = Application.WorksheetFunction.RandBetween(70, 180)
+Range(a).Cells(3, 3).Value = Application.WorksheetFunction.RandBetween(70, 180)
+Range(a).Cells(3, 4).Value = Application.WorksheetFunction.RandBetween(70, 180)
+Range(a).Cells(3, 5).Value = Application.WorksheetFunction.RandBetween(70, 180)
+Range(a).Cells(4, 1).Value = "Cuantía del siniestro $"
+Range(a).Cells(4, 2).Value = Application.WorksheetFunction.RandBetween(35000, 80000)
+Range(a).Cells(4, 3).Value = Application.WorksheetFunction.RandBetween(35000, 80000)
+Range(a).Cells(4, 4).Value = Application.WorksheetFunction.RandBetween(35000, 80000)
+Range(a).Cells(4, 5).Value = Application.WorksheetFunction.RandBetween(35000, 80000)
+End Sub
+Sub ejercicio2()
+Dim a, b As Integer
+a = 7
+b = 2
+ 
+Cells(a, b).Value = "Informe del ramo de incendio"
+Cells(a + 1, b).Value = "Año"
+Cells(a + 2, b).Value = 1
+Cells(a + 3, b).Value = 2
+Cells(a + 4, b).Value = 3
+Cells(a + 5, b).Value = 4
+Cells(a + 1, b + 1).Value = "Siniestro"
+Cells(a + 2, b + 1).Value = Application.WorksheetFunction.RandBetween(70, 180)
+Cells(a + 3, b + 1).Value = Application.WorksheetFunction.RandBetween(70, 180)
+Cells(a + 4, b + 1).Value = Application.WorksheetFunction.RandBetween(70, 180)
+Cells(a + 5, b + 1).Value = Application.WorksheetFunction.RandBetween(70, 180)
+Cells(a + 1, b + 2).Value = "Cuantía de los siniestros $"
+Cells(a + 2, b + 2).Value = Application.WorksheetFunction.RandBetween(35000, 80000)
+Cells(a + 3, b + 2).Value = Application.WorksheetFunction.RandBetween(35000, 80000)
+Cells(a + 4, b + 2).Value = Application.WorksheetFunction.RandBetween(35000, 80000)
+Cells(a + 5, b + 2).Value = Application.WorksheetFunction.RandBetween(35000, 80000)
+ 
+End Sub
