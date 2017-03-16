@@ -1,0 +1,212 @@
+Sub ejemplo()
+
+
+Range("b10").Value = "Informe de siniestros"
+Range("b11").Value = "Informe pare el año 2016"
+
+tarifa = "Tarifa e " & Range("B11").Value
+Range("b12").Value = tarifa
+
+Range("b10").Borders.Color = RGB(68, 172, 2004)
+Range("b11").Interior.Color = RGB(68, 150, 11120)
+
+Range("b12").Select
+
+Selection.Font.Bold = True ' False
+Selection.Font.Italic = True
+
+Selection.Font.Name = "Century Gothic"
+Selection.Font.Size = 24
+
+
+
+End Sub
+
+
+Sub ejemplo2()
+
+Worksheets("Hoja1").Range("a12").Value = "Informe1"
+
+Worksheets("sheet2").Range("a12").Value = "Informe1"
+
+Worksheets("Hoja3").Range("a12").Value = "Informe1"
+
+
+
+End Sub
+
+Sub cajas_textos()
+
+MsgBox ("Hola")
+
+MsgBox ("Información")
+
+Info1 = InputBox("Introduzca el ramo del negocio", "Datos de suscripción")
+
+
+End Sub
+
+
+Sub ejemplo3()
+
+MsgBox ("Buen día")
+cuenta = InputBox("Introduzca la cuenta", "Datos de suscripción")
+agente = InputBox("Introduzca el agente", "Datos de suscripción")
+ramo = InputBox("Introduzca el ramo del negocio", "Datos de suscripción")
+poliza = Application.WorksheetFunction.RandBetween(100, 10000)
+siniestros = Application.WorksheetFunction.RandBetween(100, 200)
+monto = Application.WorksheetFunction.RandBetween(800000, 1000000000)
+costo = monto / siniestros
+
+Worksheets("Datos").Range("a1").Value = "Datos"
+Worksheets("Datos").Range("a1").Borders.Color = RGB(68, 172, 2004)
+
+Worksheets("Datos").Range("a2").Value = "Cuenta"
+Worksheets("Datos").Range("b2").Value = cuenta
+
+Worksheets("Datos").Range("a3").Value = "Agente"
+Worksheets("Datos").Range("b3").Value = agente
+
+Worksheets("Datos").Range("a4").Value = "Ramo"
+Worksheets("Datos").Range("b4").Value = ramo
+
+Worksheets("Datos").Range("a5").Value = "Poliza"
+Worksheets("Datos").Range("b5").Value = poliza
+
+Worksheets("Datos").Range("a2").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Datos").Range("b2").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Datos").Range("a3").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Datos").Range("b3").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Datos").Range("a4").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Datos").Range("b4").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Datos").Range("a5").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Datos").Range("b5").Interior.Color = RGB(68, 150, 11120)
+
+Worksheets("Informe").Range("a1").Value = "Informe"
+Range("a1").Borders.Color = RGB(68, 172, 2004)
+
+Worksheets("Informe").Range("a2").Value = "Ramo"
+Worksheets("Informe").Range("b2").Value = ramo
+
+Worksheets("Informe").Range("a3").Value = "Poliza"
+Worksheets("Informe").Range("b3").Value = ploiza
+
+Worksheets("Informe").Range("a4").Value = "Siniestros"
+Worksheets("Informe").Range("b4").Value = siniestros
+
+Worksheets("Informe").Range("a3").Value = "Monto de los S"
+Worksheets("Informe").Range("b3").Value = monto
+
+Worksheets("Informe").Range("a2").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Informe").Range("b2").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Informe").Range("a3").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Informe").Range("b3").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Informe").Range("a4").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Informe").Range("b4").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Informe").Range("a5").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Informe").Range("b5").Interior.Color = RGB(68, 150, 11120)
+
+
+
+
+
+Worksheets("Resultados").Range("a1").Value = "Resultados"
+Range("a1").Borders.Color = RGB(68, 172, 2004)
+
+Worksheets("Resultados").Range("a2").Value = "Resultados"
+Worksheets("Resultados").Range("b2").Value = resultados
+
+Worksheets("Resultados").Range("a3").Value = "Costo medio"
+Worksheets("Resultados").Range("b3").Value = costo
+
+Worksheets("Resultados").Range("a4").Value = "Informe elaborado por Marko"
+
+
+Worksheets("Resultados").Range("a2").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Resultados").Range("b2").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Resultados").Range("a3").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Resultados").Range("b3").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Resultados").Range("a4").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Resultados").Range("b4").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Resultados").Range("a5").Interior.Color = RGB(68, 150, 11120)
+Worksheets("Resultados").Range("b5").Interior.Color = RGB(68, 150, 11120)
+
+
+
+
+End Sub
+
+Public cuenta As Variant
+Public ramo As Variant
+Public poliza As Variant
+' o
+Public cuenta, ramo, poliza As Variant
+
+
+Sub datos()
+
+
+Worksheets("Datos1").Select
+MsgBox ("Buen día")
+cuenta = InputBox("Introduzca la cuenta", "Datos de suscripción")
+agente = InputBox("Introduzca el agente", "Datos de suscripción")
+ramo = InputBox("Introduzca el ramo del negocio", "Datos de suscripción")
+poliza = Application.WorksheetFunction.RandBetween(100, 10000)
+siniestros = Application.WorksheetFunction.RandBetween(100, 200)
+monto = Application.WorksheetFunction.RandBetween(800000, 1000000000)
+costo = monto / siniestros
+
+
+Range("a2").Value = "Cuenta"
+Range("a3").Value = "Agente"
+Range("a4").Value = "Ramo"
+Range("a5").Value = "Poliza"
+
+Range("b2").Value = cuenta
+Range("b3").Value = agente
+Range("b4").Value = ramo
+Range("b5").Value = poliza
+
+'cambiar de hoja
+Worksheets("Informe1").Select
+
+Range("a2").Value = "Ramo"
+Range("a3").Value = "Poliza"
+Range("a4").Value = "Siniestros"
+Range("a5").Value = "Monto"
+
+
+Range("b2").Value = ramo
+Range("b3").Value = poliza
+Range("b4").Value = siniestros
+Range("b5").Value = monto
+End Sub
+
+Sub ejemplo4()
+
+Worksheets("hoja7").Activate
+
+n = 20
+
+'La estructura de un ciclo for se compone de 3 secciones
+'Primer: especificar los limites
+'Segunda: las acciones que se ralizan
+'Tercera: terminar la sentencia
+
+Range("b2").Cells(1, 1).Value = "Litas de valores"
+
+
+For i = 1 To n Step 1
+
+
+Range("b2").Cells(1 + i, 1).Value = i
+
+
+Next i
+
+Range("a2").Cells(2 + n, 1).Value = "La suma de los valores"
+datos = Range(Cells(1 + i, 2), Cells(1 + n, 2))
+
+
+
+End Sub
