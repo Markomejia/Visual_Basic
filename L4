@@ -1,0 +1,83 @@
+Function fun_1(valor)
+
+fun_1 = valor ^ (0.5)
+
+
+End Function
+
+
+'Revisar los espacios
+
+Function ejemplo(valor1, valor2)
+
+If valor1 > valor2 Then
+
+ejemplo = "El: " & valor1 & " es mayor a: " & valor2
+
+Else
+
+ejemplo = "El valor 2 es mayor al valor 1"
+
+End If
+
+End Function
+
+Function prima(sa)
+
+c1 = 6000
+c2 = 9000
+c3 = 15000
+c4 = 25000
+c5 = 25000
+
+cu1 = 3 / 100
+cu2 = 3.5 / 100
+cu3 = 4.3 / 100
+cu4 = 7 / 100
+cu5 = 7 / 100
+
+
+
+If sa > 10000 And sa < 49999 Then
+
+prima = c1 + (sa * cu1)
+
+Else
+
+If sa > 49999 And sa < 89999 Then
+
+prima = c2 + (sa * cu2)
+
+Else
+   
+If sa > 89999 And sa < 129999 Then
+ 
+prima = c3 + (sa * cu3)
+
+Else
+
+If sa > 129999 And sa < 249000 Then
+
+prima = c4 + (sa * cu4)
+
+Else
+
+If sa > 249000 And sa < 1000000 Then
+
+prima = c5 + (sa * cu5)
+
+Else
+
+MsgBox ("No mames")
+
+End If
+
+End If
+
+End If
+
+End If
+
+End If
+
+End Function
